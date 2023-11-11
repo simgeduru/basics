@@ -1,0 +1,20 @@
+@model List<Cicek>
+
+        <div class="card mb-3"></div>
+        @foreach(var cicek in Model){
+        <div class="card mb-3" id="">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src = "~/img/@cicek.Image" alt=">" height="300" width="400">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h2 class="card-title"> @cicek.name</h2>
+                        <p class="card-text">@cicek.about</p>
+                        <p class="card-text">@("sayısı: " + @cicek.amount)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+  
